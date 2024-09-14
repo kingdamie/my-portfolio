@@ -530,11 +530,11 @@ nav a.active {
 .footer-section ul li {
 	margin: 0.5rem 0;
 }
-.footer-section ul li a{
-display: flex;
-align-items: center;
-gap: 15px;
-justify-content: center;
+.footer-section ul li a {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	justify-content: center;
 }
 
 .footer-social a {
@@ -547,11 +547,10 @@ justify-content: center;
 	align-items: center;
 	gap: 1rem;
 }
-.footer-section.contact p a{
-		display: flex;
+.footer-section.contact p a {
+	display: flex;
 	align-items: center;
 	gap: 1rem;
-
 }
 .footer-section.links {
 	text-align: center;
@@ -581,6 +580,9 @@ justify-content: center;
 	.home h1 {
 		text-align: center;
 		font-size: 2rem;
+	}
+	.footer-section ul li a {
+		justify-content: flex-start;
 	}
 	.about .about-text {
 		margin: 0%;
