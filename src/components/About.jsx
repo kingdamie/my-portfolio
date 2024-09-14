@@ -1,4 +1,4 @@
-import King from "../../public/King.jpg";
+import King from "../assets/King.jpg";
 
 const About = () => {
 	return (
