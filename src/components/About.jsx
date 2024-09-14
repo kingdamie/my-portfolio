@@ -1,10 +1,10 @@
-import King from "../assets/King.jpg";
+import king from "../assets/king.jpg";
 
 const About = () => {
 	return (
 		<>
 			<div className="profile">
-				<img src={King} alt="king" />
+				<img src={king} alt="king" />
 			</div>
 
 			<div className="about-text">
