@@ -4,7 +4,12 @@ import {
 	FaMapMarkerAlt,
 	FaPhoneAlt,
 	FaEnvelope,
+	FaHome,
+	FaUser,
+	FaPhone,
 } from "react-icons/fa";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { IoMdCodeWorking } from "react-icons/io";
 
 const Footer = () => {
 	return (
@@ -39,19 +44,19 @@ const Footer = () => {
 					<h3>Links</h3>
 					<ul>
 						<li>
-							<a href="#home">Home</a>
+							<a href="#home"><FaHome/> Home</a>
 						</li>
 						<li>
-							<a href="#about">About</a>
+							<a href="#about"><FaUser /> About</a>
 						</li>
 						<li>
-							<a href="#services">Services</a>
+							<a href="#services"><MdMiscellaneousServices/> Services</a>
 						</li>
 						<li>
-							<a href="#projects">Projects</a>
+							<a href="#projects"><IoMdCodeWorking/> Projects</a>
 						</li>
 						<li>
-							<a href="#contact">Contact</a>
+							<a href="#contact"><FaPhone /> Contact</a>
 						</li>
 					</ul>
 				</div>

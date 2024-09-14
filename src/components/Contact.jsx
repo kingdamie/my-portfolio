@@ -12,7 +12,7 @@ const Contact = () => {
 					<div className="contact-icon">
 						<FaPhoneAlt />
 					</div>
-					<h3>Contanct Number</h3>
+					<h3>Contact Number</h3>
 					<a href="tel:+2347033149596">+234703 314 9596</a>
 				</div>
 

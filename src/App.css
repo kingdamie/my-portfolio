@@ -530,6 +530,12 @@ nav a.active {
 .footer-section ul li {
 	margin: 0.5rem 0;
 }
+.footer-section ul li a{
+display: flex;
+align-items: center;
+gap: 15px;
+justify-content: center;
+}
 
 .footer-social a {
 	color: #aaa;
@@ -540,6 +546,12 @@ nav a.active {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+}
+.footer-section.contact p a{
+		display: flex;
+	align-items: center;
+	gap: 1rem;
+
 }
 .footer-section.links {
 	text-align: center;
