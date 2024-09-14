@@ -744,6 +744,7 @@ nav a.active {
 }
 .modal-content .modal-heading h2 {
 	color: var(--tomato-red);
+	font-size: 1rem;
 }
 .github {
 	margin: 1rem 0;
@@ -752,7 +753,7 @@ nav a.active {
 .liveserver a {
 	color: var(--mandarin-red);
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 14px;
 }
 .image-gallery {
 	display: grid;
@@ -786,8 +787,10 @@ nav a.active {
 	.image-gallery-three {
 		grid-template-columns: 1fr;
 	}
+	.modal-content {
+		width: 90%;
+	}
 }
-
 /* loader */
 .loading {
 	width: 100vw;
