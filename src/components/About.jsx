@@ -34,13 +34,13 @@ const About = () => {
 					<label htmlFor="name">phone:</label>
 					<span>07033149596</span>
 					<label htmlFor="location">Location:</label>
-					<span>Nigeria</span>
+					<span style="margin-left:10px;">Nigeria</span>
 					<label htmlFor="interests">Interests:</label>
-					<span>Coding, Problem-Solving, AI and Machine Learning.</span>
+					<span style="margin-left:10px;">Coding, Problem-Solving, AI and Machine Learning.</span>
 					<label htmlFor="hobbies">Hobbies:</label>
-					<span>Exploring new programming languages, playing chess.</span>
+					<span style="margin-left:10px;">Exploring new programming languages, playing chess.</span>
 					<label htmlFor="learning">Learning:</label>
-					<span>React Native, Next.js (using TypeScript).</span>
+					<span style="margin-left:10px;">React Native, Next.js (using TypeScript).</span>
 				</div>
 			</div>
 		</>
