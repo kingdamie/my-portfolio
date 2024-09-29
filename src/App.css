@@ -202,6 +202,7 @@ nav a.active {
 }
 .about .about-text .details span {
 	width: 90%;
+	margin-left:1rem;
 }
 /* resume*/
 .resume {
