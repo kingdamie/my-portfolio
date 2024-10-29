@@ -28,10 +28,17 @@ const Experience = () => {
 		<>
 			<ExperienceItem
 				icon={<FaBriefcase size={30} color="white" />}
-				year="July - till date"
+				year="July - September 2024"
 				position="Software Developer Intern"
 				companyName="GigsTech Solution and Consult"
 				description="Developed web applications using React, focusing on building dynamic and responsive user interfaces. Integrated RESTful APIs to fetch and display data, ensuring seamless communication between the frontend and backend. Collaborated with the team to implement features, debug issues, and optimize performance in modern web projects."
+			/>
+			<ExperienceItem
+				icon={<FaBriefcase size={30} color="white" />}
+				year="August 2022 - July 2023"
+				position="Frontend Developer"
+				companyName="BRIDGE TECHNOLOGY DEVELOPMENT"
+				description="Developed responsive web and mobile applications using React and React Native. Focused on creating user-friendly interfaces, optimizing performance, and ensuring cross-browser compatibility. Collaborated with backend teams to integrate APIs, implement new features, and streamline deployments."
 			/>
 			<ExperienceItem
 				icon={<FaBriefcase size={30} color="white" />}
