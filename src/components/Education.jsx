@@ -27,7 +27,7 @@ const Education = () => {
 		<>
 			<EducationItem
 				icon={<IoSchool size={30} color="white" />}
-				year="2021 - till date"
+				year="2021 - 2025"
 				degree="Bachelor of Science in Computer Science"
 				schoolName="Afe Babalola University"
 				description="Studying Computer Science has provided me with a solid foundation in programming, algorithms, and software development, preparing me for a successful career in tech. I also served as the Hardware Director for NACOS (year set 23/24), enhancing my leadership and technical skills."

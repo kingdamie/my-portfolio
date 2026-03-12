@@ -28,6 +28,27 @@ const Experience = () => {
 		<>
 			<ExperienceItem
 				icon={<FaBriefcase size={30} color="white" />}
+				year="June - August 2025"
+				position="Frontend Developer"
+				companyName="Southern Atlantic Hotel"
+				description="Developed web applications using React, focusing on building dynamic and responsive user interfaces. Integrated RESTful APIs to fetch and display data, ensuring seamless communication between the frontend and backend. Collaborated with the team to implement features, debug issues, and optimize performance in modern web projects."
+			/>
+			<ExperienceItem
+				icon={<FaBriefcase size={30} color="white" />}
+				year="November 2024 - August 2025"
+				position="Mobile App & Web Developer Intern"
+				companyName="Sendrail"
+				description="Developed web applications using React, focusing on building dynamic and responsive user interfaces. Integrated RESTful APIs to fetch and display data, ensuring seamless communication between the frontend and backend. Collaborated with the team to implement features, debug issues, and optimize performance in modern web projects."
+			/>
+			<ExperienceItem
+				icon={<FaBriefcase size={30} color="white" />}
+				year="December 2024 - Feburary 2025"
+				position="Software Developer"
+				companyName="IntelliSense Vivid Technologies"
+				description="Developed web applications using React, focusing on building dynamic and responsive user interfaces. Integrated RESTful APIs to fetch and display data, ensuring seamless communication between the frontend and backend. Collaborated with the team to implement features, debug issues, and optimize performance in modern web projects."
+			/>
+			<ExperienceItem
+				icon={<FaBriefcase size={30} color="white" />}
 				year="July - September 2024"
 				position="Software Developer Intern"
 				companyName="GigsTech Solution and Consult"
@@ -35,21 +56,21 @@ const Experience = () => {
 			/>
 			<ExperienceItem
 				icon={<FaBriefcase size={30} color="white" />}
-				year="August 2022 - July 2023"
+				year="July 2024 - September 2024"
 				position="Frontend Developer"
 				companyName="BRIDGE TECHNOLOGY DEVELOPMENT"
 				description="Developed responsive web and mobile applications using React and React Native. Focused on creating user-friendly interfaces, optimizing performance, and ensuring cross-browser compatibility. Collaborated with backend teams to integrate APIs, implement new features, and streamline deployments."
 			/>
 			<ExperienceItem
 				icon={<FaBriefcase size={30} color="white" />}
-				year="July - September 2023"
+				year="July 2023 - September 2024"
 				position="Frontend Development Intern"
 				companyName="GigsTech Solution and Consult"
 				description="Continued to develop frontend skills, working on real-world projects and enhancing knowledge in modern frameworks."
 			/>
 			<ExperienceItem
 				icon={<FaBriefcase size={30} color="white" />}
-				year="July - September 2022"
+				year="August - December 2022"
 				position="Frontend Development Trainee"
 				companyName="GigsTech Solution and Consult"
 				description="Focused on learning frontend development, gaining practical experience with HTML, CSS, and JavaScript."
