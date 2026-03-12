@@ -3,17 +3,18 @@ import PropTypes from "prop-types";
 
 const EducationItem = ({ icon, year, degree, schoolName, description }) => {
 	return (
-		<div className="resume-item">
-			<div className="icon">{icon}</div>
-			<div className="edu-content">
-				<div className="year">{year}</div>
-				<div className="degree">{degree}</div>
-				<div className="school-name">{schoolName}</div>
-				<p>{description}</p>
+		<div className="flex items-start gap-6 mb-8 border-b border-gray-200 pb-8 mt-4">
+			<div className="bg-brand p-3 rounded-full flex-shrink-0">{icon}</div>
+			<div className="flex flex-col gap-3">
+				<div className="text-brand font-bold">{year}</div>
+				<div className="font-bold text-2xl max-sm:text-sm">{degree}</div>
+				<div className="font-bold max-sm:text-base">{schoolName}</div>
+				<p className="text-[#333] max-sm:text-xs">{description}</p>
 			</div>
 		</div>
 	);
 };
+
 EducationItem.propTypes = {
 	icon: PropTypes.element.isRequired,
 	year: PropTypes.string.isRequired,

@@ -3,13 +3,13 @@ import { FaBriefcase } from "react-icons/fa";
 
 const ExperienceItem = ({ icon, year, position, companyName, description }) => {
 	return (
-		<div className="resume-item">
-			<div className="icon">{icon}</div>
-			<div className="edu-content">
-				<div className="year">{year}</div>
-				<div className="position">{position}</div>
-				<div className="company-name">{companyName}</div>
-				<p>{description}</p>
+		<div className="flex items-start gap-6 mb-8 border-b border-gray-200 pb-8 mt-4">
+			<div className="bg-brand p-3 rounded-full flex-shrink-0">{icon}</div>
+			<div className="flex flex-col gap-3">
+				<div className="text-brand font-bold">{year}</div>
+				<div className="font-bold text-2xl max-sm:text-sm">{position}</div>
+				<div className="font-bold max-sm:text-base">{companyName}</div>
+				<p className="text-[#333] max-sm:text-xs">{description}</p>
 			</div>
 		</div>
 	);
@@ -42,7 +42,7 @@ const Experience = () => {
 			/>
 			<ExperienceItem
 				icon={<FaBriefcase size={30} color="white" />}
-				year="December 2024 - Feburary 2025"
+				year="December 2024 - February 2025"
 				position="Software Developer"
 				companyName="IntelliSense Vivid Technologies"
 				description="Developed web applications using React, focusing on building dynamic and responsive user interfaces. Integrated RESTful APIs to fetch and display data, ensuring seamless communication between the frontend and backend. Collaborated with the team to implement features, debug issues, and optimize performance in modern web projects."
@@ -79,7 +79,7 @@ const Experience = () => {
 				icon={<FaBriefcase size={30} color="white" />}
 				year="January - July 2021"
 				position="IT Department Intern"
-				companyName="Tobid Divine Success Micro-Invesment Limited"
+				companyName="Tobid Divine Success Micro-Investment Limited"
 				description="Worked in the IT department, gaining experience in technical support, system management, and IT operations."
 			/>
 		</>
