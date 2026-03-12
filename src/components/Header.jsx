@@ -26,7 +26,6 @@ export const Header = () => {
 		} else {
 			document.removeEventListener("mousedown", handleClickOutside);
 		}
-
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
@@ -42,17 +41,14 @@ export const Header = () => {
 		const handleScroll = () => {
 			const sections = document.querySelectorAll("section");
 			let current = "";
-
 			sections.forEach((section) => {
 				const sectionTop = section.offsetTop;
 				if (pageYOffset >= sectionTop - 60) {
 					current = section.getAttribute("id");
 				}
 			});
-
 			setActiveLink(current);
 		};
-
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
@@ -66,67 +62,50 @@ export const Header = () => {
 	};
 
 	return (
-		<header>
-			<div className="myname">
-				<div>
-					<span>D</span>amilare
-					<div className="circle"></div>
+		<header className="sticky top-0 z-[1000] bg-white shadow-md w-full">
+			<div className="max-w-7xl mx-auto flex justify-between px-8 md:px-12 h-auto md:h-[10vh] flex-col md:flex-row py-3 md:py-0 items-start md:items-center w-full">
+				{/* Logo */}
+				<div className="font-bold text-[22px] relative flex-[4] flex items-center justify-between w-full md:w-auto mb-0">
+					<div className="relative">
+						<span className="text-white ml-[5px]">D</span>amilare
+						<div className="absolute h-[30px] w-[30px] bg-brand rounded-full p-3 top-[5%] left-0 z-[-1]"></div>
+					</div>
+					{/* Hamburger */}
+					<div
+						className="flex md:hidden cursor-pointer flex-col gap-[5px]"
+						onClick={toggleMobileMenu}
+						ref={menuIconRef}
+					>
+						<span className="block w-[25px] h-[3px] bg-brand"></span>
+						<span className="block w-[25px] h-[3px] bg-brand"></span>
+						<span className="block w-[25px] h-[3px] bg-brand"></span>
+					</div>
 				</div>
-				<div
-					className="mobile-menu-icon"
-					onClick={toggleMobileMenu}
-					ref={menuIconRef}
-				>
-					<span className="bar"></span>
-					<span className="bar"></span>
-					<span className="bar"></span>
-				</div>
-			</div>
 
-			<nav ref={navRef}>
-				<a
-					href="#home"
-					className={activeLink === "home" ? "active" : ""}
-					onClick={() => scrollToSection("home")}
+				{/* Nav */}
+				<nav
+					ref={navRef}
+					className={`${isMobileMenuOpen ? "flex" : "hidden"
+						} md:flex flex-col md:flex-row items-start md:items-center justify-between w-full md:w-auto gap-3 md:gap-0 md:flex-[8] md:mr-8 pt-3 md:pt-0 pb-2 md:pb-0`}
 				>
-					Home
-				</a>
-				<a
-					href="#about"
-					className={activeLink === "about" ? "active" : ""}
-					onClick={() => scrollToSection("about")}
-				>
-					About
-				</a>
-				<a
-					href="#resume"
-					className={activeLink === "resume" ? "active" : ""}
-					onClick={() => scrollToSection("resume")}
-				>
-					Resume
-				</a>
-				<a
-					href="#services"
-					className={activeLink === "services" ? "active" : ""}
-					onClick={() => scrollToSection("services")}
-				>
-					Services
-				</a>
-				<a
-					href="#projects"
-					className={activeLink === "projects" ? "active" : ""}
-					onClick={() => scrollToSection("projects")}
-				>
-					Projects
-				</a>
-				<a
-					href="#contact"
-					className={activeLink === "contact" ? "active" : ""}
-					onClick={() => scrollToSection("contact")}
-				>
-					Contact
-				</a>
-			</nav>
+					{["home", "about", "resume", "services", "projects", "contact"].map(
+						(link) => (
+							<a
+								key={link}
+								href={`#${link}`}
+								className={`relative capitalize no-underline transition-colors duration-300 hover:text-brand
+								after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:bg-brand after:w-0 after:transition-all after:duration-400 hover:after:w-full hover:after:left-0
+								${activeLink === link ? "font-bold text-brand" : "text-black"}`}
+								onClick={() => scrollToSection(link)}
+							>
+								{link.charAt(0).toUpperCase() + link.slice(1)}
+							</a>
+						)
+					)}
+				</nav>
+
+			</div>
 		</header>
+
 	);
 };

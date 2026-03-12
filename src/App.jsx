@@ -16,13 +16,10 @@ function App() {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-
-		 AOS.init({duration: 2000});
-
+		AOS.init({ duration: 2000 });
 		const timer = setTimeout(() => {
 			setLoading(false);
 		}, 3000);
-
 		return () => clearTimeout(timer);
 	}, []);
 
@@ -33,29 +30,58 @@ function App() {
 	return (
 		<>
 			<Header />
-			<section id="home" className="home " data-aos="fade-up">
+
+			{/* Home */}
+			<section
+				id="home"
+				className="h-[90vh] w-full flex items-center justify-center flex-col gap-4"
+				style={{ background: "linear-gradient(to right, #fad390 50%, whitesmoke  50%)" }}
+				data-aos="fade-up"
+			>
 				<Home />
 			</section>
-			<section id="about" className="about" data-aos="zoom-in">
+
+			{/* About */}
+			<section
+				id="about"
+				className="flex items-start gap-4"
+				data-aos="zoom-in"
+			>
 				<About />
 			</section>
+
+			{/* Resume */}
 			<section id="resume">
 				<Resume />
 			</section>
-			<section id="services" className="services">
+
+			{/* Services */}
+			<section
+				id="services"
+				className="text-center py-32 md:py-64 px-8"
+			>
 				<Services />
 			</section>
-			<section id="projects" className="project" data-aos="zoom-in-up">
+
+			{/* Projects */}
+			<section
+				id="projects"
+				className="pt-16 pb-8"
+				data-aos="zoom-in-up"
+			>
 				<Project />
 			</section>
+
+			{/* Contact */}
 			<section
 				id="contact"
-				className="contact-section"
+				className="py-20 px-8 text-center"
 				data-aos="zoom-in-up"
 				data-aos-duration="1000"
 			>
 				<Contact />
 			</section>
+
 			<Footer />
 		</>
 	);

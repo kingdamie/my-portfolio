@@ -1,15 +1,35 @@
+import { useState, useEffect } from "react";
 import king from "../assets/king.jpg";
+import damie from '../assets/kingdamie.jpeg';
+import DownloadButton from "./ui/DownloadButton";
 
 const About = () => {
+	const images = [king, damie]; // Add more images here if needed
+	const [currentImage, setCurrentImage] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentImage((prev) => (prev + 1) % images.length);
+		}, 60000); // Change image every 60 seconds
+
+		return () => clearInterval(interval); // Cleanup on unmount
+	}, []);
+
 	return (
-		<>
-			<div className="profile">
-				<img src={king} alt="king" />
+		<div className="flex items-start justify-center flex-col-reverse md:flex-row mt-8 md:mt-0">
+			{/* Profile image */}
+			<div className="w-full md:w-1/2 flex justify-end">
+				<img
+					src={images[currentImage]}
+					alt="king"
+					className="w-full md:w-[70%] h-full object-cover transition-all duration-700"
+				/>
 			</div>
 
-			<div className="about-text">
-				<h1>About me</h1>
-				<p>
+			{/* About text */}
+			<div className="w-full md:w-1/2 px-4 md:px-4">
+				<h1 className="text-[26px] my-4 text-brand font-bold">About me</h1>
+				<p className="text-gray-500 text-base w-full md:w-[90%]">
 					A passionate software developer with a knack for creating intuitive
 					and dynamic user interfaces. From a young age, I&rsquo;ve been
 					fascinated by the intersection of technology and creativity, leading
@@ -17,33 +37,26 @@ const About = () => {
 					problems and continuously learning new technologies to enhance my
 					skillset.
 				</p>
-				{/* <p>
-					I am Olaniyan Damilare Ridwan, a dedicated software developer with a
-					strong foundation in web development and a growing expertise in
-					machine learning. My journey into technology began out of a deep
-					curiosity for how things work, particularly in the digital world. Over
-					the years, I have honed my skills in creating seamless and efficient
-					user experiences, driven by a commitment to continuous learning and
-					improvement.
-				</p> */}
-				<div className="details">
-					<label htmlFor="name">Name:</label>
-					<span>Olaniyan Damilare Ridwan</span>
-					<label htmlFor="name">Email:</label>
-					<span>damyridwan@gmail.com</span>
-					<label htmlFor="name">phone:</label>
-					<span>07033149596</span>
-					<label htmlFor="location">Location:</label>
-					<span >Nigeria</span>
-					<label htmlFor="interests">Interests:</label>
-					<span >Coding, Problem-Solving, AI and Machine Learning.</span>
-					<label htmlFor="hobbies">Hobbies:</label>
-					<span >Exploring new programming languages, playing chess.</span>
-					{/* <label htmlFor="learning">Learning:</label>
-					<span >React Native, Next.js (using TypeScript).</span> */}
+
+				<div className="grid mt-4 mb-4 gap-y-4" style={{ gridTemplateColumns: "auto 1fr" }}>
+					<label className="font-bold text-brand">Name:</label>
+					<span className="ml-4 w-[90%]">Olaniyan Damilare Ridwan</span>
+					<label className="font-bold text-brand">Email:</label>
+					<span className="ml-4 w-[90%]">damyridwan@gmail.com</span>
+					<label className="font-bold text-brand">Phone:</label>
+					<span className="ml-4 w-[90%]">07033149596</span>
+					<label className="font-bold text-brand">Location:</label>
+					<span className="ml-4 w-[90%]">Nigeria</span>
+					<label className="font-bold text-brand">Interests:</label>
+					<span className="ml-4 w-[90%]">Coding, Problem-Solving, AI and Machine Learning.</span>
+					<label className="font-bold text-brand">Hobbies:</label>
+					<span className="ml-4 w-[90%]">Exploring new programming languages, playing chess.</span>
 				</div>
+
+
+				<DownloadButton />
 			</div>
-		</>
+		</div>
 	);
 };
 
