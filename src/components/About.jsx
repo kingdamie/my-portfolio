@@ -39,8 +39,8 @@ const About = () => {
 					<span >Coding, Problem-Solving, AI and Machine Learning.</span>
 					<label htmlFor="hobbies">Hobbies:</label>
 					<span >Exploring new programming languages, playing chess.</span>
-					<label htmlFor="learning">Learning:</label>
-					<span >React Native, Next.js (using TypeScript).</span>
+					{/* <label htmlFor="learning">Learning:</label>
+					<span >React Native, Next.js (using TypeScript).</span> */}
 				</div>
 			</div>
 		</>
